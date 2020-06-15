@@ -41,7 +41,7 @@ public class UnixServer {
             System.out.println("server: " + server);
 
             while (!Thread.interrupted()) {
-                System.out.println("Waiting for connection...");
+                //System.out.println("Waiting for connection...");
                 executorService.execute(new ClientConnection(this, server.accept()));
             }
         } finally {

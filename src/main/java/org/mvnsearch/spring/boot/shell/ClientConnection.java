@@ -29,7 +29,7 @@ public class ClientConnection implements Runnable {
         context.remove();
 
         try (Scanner is = new Scanner(sock.getInputStream()); OutputStream os = sock.getOutputStream()) {
-            System.out.println("Connected: " + sock);
+            //System.out.println("Connected: " + sock);
 
             try (PrintStream writer = new PrintStream(os, true)) {
                 context.set(writer);
