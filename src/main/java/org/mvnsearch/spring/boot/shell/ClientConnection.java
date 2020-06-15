@@ -43,7 +43,7 @@ public class ClientConnection implements Runnable {
                         writer.println(commandResult.getException().getMessage());
                     } else {
                         if (commandResult.getResult() != null) {
-                            writer.println(commandResult.getResult().toString());
+                            writer.print(commandResult.getResult().toString());
                         }
                     }
                     writer.flush();
